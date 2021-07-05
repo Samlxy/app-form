@@ -1,0 +1,66 @@
+#grid-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 5px;
+}
+
+.columns {
+  text-align: center;
+}
+
+body {
+  background-color: lavender;
+}
+
+h1 {
+  text-align: center;
+}
+
+.label {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.texts {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.texts:focus {
+  border: 1px solid #59abd3;
+}
+
+#line {
+  margin: 40px 20px;
+  background: silver;
+  height: 0.1px;
+  border: 1px;
+}
+
+#select {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+#submit {
+  font-size: 22px;
+  background-color: #59abd3;
+  color: #ffffff;
+  padding: 10px 70px;
+  border-radius: 7px;
+  margin-top: 80px;
+  margin-left: 600px;
+  border: none;
+  cursor: pointer;
+}
+
+#tag {
+  font-size: 18px;
+  font-weight: bold;
+}
