@@ -1,137 +1,45 @@
 <!Doctype html>
 <html>
   <head>
+    <title>app-form</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FORM</title>
+    <title>app-form</title>
     <link rel="stylesheet" href="index.css">
-  </head>    
-
-  <body>
-    <h1>APPLICATION FORM</h1>
-    <h2>Personal Information</h2>
-      <form>
-        <div id="grid-row">
-          <div id="col-one" class="columns">
-          <label for="texts" class="label">First Name:</label>
-          <input type="text" class="texts" placeholder="first name" />
-          <br><br>
-          <label for="texts" class="label">Phone Number:</label>
-          <input type="tel" class="texts" placeholder="+234 0703 678 5432" />
-          <br><br>
-          <label for="texts" class="label">L.G.A:</label>
-          <input type="text" class="texts" placeholder="local govt." />
-          <br><br>
-          <label for="texts" class="label">Religion:</label>
-          <input type="text" class="texts" placeholder="christianity/islamic/others" />
-          <br><br>
-          <label for="texts" class="label">Next of Kin:</label>
-          <input type="text" class="texts" placeholder="next of kin" />
-          </div>
-
-          <div id="col-two" class="columns">
-          <label for="texts" class="label">Middle Name:</label>
-          <input type="text" class="texts" placeholder="middle name" />
-          <br><br>
-          <label for="texts" class="label">Address:</label>
-          <input type="text" class="texts" placeholder="residential address" />
-          <br><br>
-          <label for="texts" class="label">Nationality:</label>
-          <input type="text" class="texts" placeholder="country" />
-          <br><br>
-          <label for="texts" class="label">Education:</label>
-          <input type="text" class="texts" placeholder="ond/hnd/bsc/others" />
-          <br><br>
-          <label for="texts" class="label">Address:</label>
-          <input type="text" class="texts" placeholder="home address" />
-          </div>
-
-          <div id="col-three" class="columns">
-          <label for="texts" class="label">Last Name:</label>
-          <input type="text" class="texts" placeholder="last name" />
-          <br><br>
-          <label for="texts" class="label">Date of Birth:</label>
-          <input type="date" class="texts" placeholder="day/month/year" />
-          <br><br>
-          <label for="texts" class="label">Marital Status:</label>
-          <input type="text" class="texts" placeholder="single/married/divorced" />
-          <br><br>
-          <label for="texts" class="label">Height:</label>
-          <input type="text" class="texts" placeholder="feet." />
-          <br><br>
-          <label for="texts" class="label">Phone Number:</label>
-          <input type="text" class="texts" placeholder="+234 0903 341 6225" />
-          </div>
-
-          <div id="col-four" class="columns">
-          <label for="texts" class="label">Gender:</label>
-          <input type="text" class="texts" placeholder="male/female/others" />
-          <br><br>
-          <label for="texts" class="label">State of Origin:</label>
-          <input type="text" class="texts" placeholder="state of origin" />  
-          <br><br>
-          <label for="texts" class="label">Employment:</label>
-          <input type="text" class="texts" placeholder="military/civillian" />  
-          <br><br>
-          <label for="texts" class="label">Disability:</label>
-          <input type="text" class="texts" placeholder="blind/deaf/others" />
-          <br><br>
-          <label for="texts" class="label">Nationality:</label>
-          <input type="text" class="texts" placeholder="country" />
-          </div>
-        </div>  
-
-        <hr id="line">
-        <h2>Employment Information</h2>
-        <div id="grid-row">
-          <div id="col-one" class="columns">
-          <label for="texts" class="label">Experience:</label>
-          <input type="number" class="texts" placeholder="years of experience" />
-          <br><br>
-          <label for="texts" class="label">Resumption:</label>
-          <input type="tel" class="texts" placeholder="earliest start date" />
-          </div>
-
-          <div id="col-two" class="columns">
-          <label for="texts" class="label">Technology:</label>
-          <input type="tel" class="texts" placeholder="tools you use" />
-          <br><br>
-          <label for="texts" class="label">Git Repo:</label>
-          <input type="tel" class="texts" placeholder="github url" />
-          </div>
-
-          <div id="col-three" class="columns">
-          <label for="texts" class="label">Previous Salary:</label>
-          <input type="text" class="texts" placeholder="naira/dollars" />
-          <br><br>
-          <label for="texts" class="label">Employment Type:</label>
-          <select name="select">
-            <option value="choose">Choose</option>
-            <option value="permanent">Permanent</option>
-            <option value="contract">Contract</option>
-          </select>
-          </div>
-
-          <div id="col-four" class="columns">
-          <label for="texts" class="label">Salary Expectation:</label>
-          <input type="text" class="texts" placeholder="naira/dollars" />
-          <br><br>
-          <label for="texts" class="label">Work Type:</label>
-          <select name="select" id="select">
-            <option value="choose">Choose</option>
-            <option value="permanent">Onsite</option>
-            <option value="contract">Remote</option>
-          </select>
-          </div>
-        </div>  
-        <div id="sub-div">
-        <input id="submit" type="submit" value="submit" onClick="submitForm()"/>
-        </div>
-        
-        <p id="tag">Samuel Nwali</p>
-      </form>
+    <!-- copied scripts -->
+    <script src="jquery.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-1.7.1.js"></script>
+     <script src="Scripts/jquery.signalR-2.2.0.js"></script>
+    <!--Reference the auto-generated SignalR hub script. -->
+    <script src="signalr/hubs"></script>
+    <script src="script.js" type="text/javascript"></script>
+  </head>
+  <body>    
+    <!--<h4>Created by Samuel Nwali - HTS</h4> -->
+    <div id="container">
+      <h3>APPLICATION FORM</h3>
+      <h5>Personal Information</h5>
+      <input type="text" id="fName" class="input-style" size="35" placeholder="First name *" autocomplete="off"/><br><br>
+      <input type="tel" id="lName" class="input-style" size="35"  placeholder="Last name *" autocomplete="off"/><br><br>
+      <input type="text" id="gender" class="input-style" size="35" placeholder="Gender *" autocomplete="off"/><br><br>
+      <input type="text" id="number" class="input-style" size="35" placeholder="Number *" autocomplete="off"/><br><br>
+      <button id="submit" class="submit submitUpdate">Submit</button>
+      <button id="update" class="update submitUpdate">Update</button>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th class="column">FirstName</th>
+          <th class="column">LastName</th>
+          <th class="column">Gender</th>
+          <th class="column">Number</th>
+          <th class="column">Update</th>
+          <th class="column">Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+      </tbody>
+    </table>
   </body>
-
-  <script src="index.js"></script>  
-
 </html>
